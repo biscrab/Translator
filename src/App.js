@@ -18,7 +18,7 @@ function App() {
         'X-Naver-Client-Secret': "W27O8Gyva2",
       }
     }
-    axios.post('https://openapi.naver.com/v1/papago/n2mt',JSON.stringify({"source": "ko", "target": "en", "text": "사과"}), config)
+    axios.post('https://openapi.naver.com/v1/',JSON.stringify({"source": "ko", "target": "en", "text": "사과"}), config)
       .then(responese => {
         console.log(responese);
       })
