@@ -7,12 +7,27 @@ export const Body = styled.div`
     align-items: center;
 `
 
-export const TextDiv = styled.div`
-    border: 2px solid #eeeeee;
-    width: 500px;
+export const IDiv = styled.div`
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    filter: brightness(50%);
+    width: 100%;
+    height: 100%;
+`
 
-    margin: 10px;
+export const Img = styled.img`
+    width: 100%;
+    height: 100%;
+`
+
+export const TextDiv = styled.div`
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 40px;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 `
 
 export const Text = styled.textarea`
@@ -20,21 +35,58 @@ export const Text = styled.textarea`
     resize: none;
     height: 250px;
     width: 480px;
-    font-size: 20px;
+    font-size: 23px;
     border: 0;
     outline: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0);
 `
 
 export const Top = styled.div`
     height: 50px;
-    border-bottom: 2px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+`
+
+export const DropDown = styled.div`
+    padding-left: 20px;
+    :hover{
+        color: royalblue;
+    }
+`
+
+export const DDiv = styled.div`
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+`
+
+export const Select = styled.div`
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: absolute;
+    height: 230px;
+    width: 560px;
+    top: 36px;
+    list-style: none;
+    padding: 20px;
+
+    li{
+        width: 33%;
+        :hover{
+            color: royalblue;
+        }
+    }
 `
 
 export const Bottom = styled.div`
     display: flex;
     flex-direction: row-reverse;
-    border-top: 2px solid #eeeeee;
     height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
 `
 
 export const Button = styled.button`
@@ -49,7 +101,14 @@ export const Button = styled.button`
 `
 
 export const Header = styled.nav`
-    padding-left: 50px;
     height: 60px;
     border-bottom: 2px solid #eeeeee;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        margin: 0;
+    }
 `
