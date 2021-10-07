@@ -34,12 +34,13 @@ export const Text = styled.textarea`
     padding: 10px;
     resize: none;
     height: 250px;
-    width: 480px;
+    width: 580px;
     font-size: 23px;
     border: 0;
     outline: 0;
     margin: 0;
     background-color: rgba(0, 0, 0, 0);
+    font-family: 'Noto Sans KR', sans-serif;
 `
 
 export const Top = styled.div`
@@ -60,6 +61,12 @@ export const DDiv = styled.div`
     position: absolute;
     display: flex;
     flex-direction: column;
+`
+
+export const Change = styled.span`
+    position: relative;
+    left: 550px;
+    font-size: 30px;
 `
 
 export const Select = styled.div`
@@ -97,7 +104,6 @@ export const Button = styled.button`
     border: 0;
     outline: 0;
     position: relative;
-    border-radius: 2px;
 `
 
 export const Header = styled.nav`

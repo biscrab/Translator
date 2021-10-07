@@ -20,6 +20,7 @@ function App() {
         'Content-Type': 'application/json',
         'X-Naver-Client-Id': "Bhep0ILS5ymb1onqI6st",
         'X-Naver-Client-Secret': "W27O8Gyva2",
+        'Access-Control-Allow-Origin': "*"
       }
     }
     axios.post('https://openapi.naver.com/v1/papago/n2mt', v, config)
@@ -65,12 +66,18 @@ function App() {
     )
   }
 
+  function exChange() {
+    setName({source: name.target, target: name.source});
+    setV({source: v.target, target: v.source});
+  }
+
   return (
     <>
     <Header />
     <S.Body>
     <S.TextDiv>
       <S.Top>
+      <>
         <S.DDiv>
         <S.DropDown onClick={()=>setSelect({...select, source:!select.source})}>
           {name.source}▼
@@ -81,6 +88,8 @@ function App() {
         <></>
         }
       </S.DDiv>
+      </>
+      <S.Change onClick={()=>exChange()}>🔁</S.Change>
       </S.Top>
       <S.Text value={v.text} onChange={(e)=>setV({...v, text: e.target.value})} placeholder="번역할 내용을 입력해 주세요">
       </S.Text>
