@@ -10,11 +10,15 @@ function App() {
   const [t, setT] = useState();
 
   function translate(){
-    const headers = [{
-      "X-Naver-Client-Id": "Bhep0ILS5ymb1onqI6st",
-      "X-Naver-Client-Secret": "W27O8Gyva2",
-    }]
-    axios.post('https://openapi.naver.com/v1/papago/n2mt',{source: 1, target: 2, text: text}, headers)
+    const config = {
+      baseURL: 'https://openapi.naver.com/v1/',
+      headers: {
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'X-Naver-Client-Id': "Bhep0ILS5ymb1onqI6st",
+        'X-Naver-Client-Secret': "W27O8Gyva2",
+      }
+    }
+    axios.post('https://openapi.naver.com/v1/papago/n2mt',JSON.stringify({"source": "ko", "target": "en", "text": "사과"}), config)
       .then(responese => {
         console.log(responese);
       })
