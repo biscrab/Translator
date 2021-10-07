@@ -10,7 +10,7 @@ export const Body = styled.div`
 export const TextDiv = styled.div`
     border: 2px solid #eeeeee;
     width: 500px;
-    height: 324px;
+
     margin: 10px;
     padding: 0;
 `
@@ -23,6 +23,11 @@ export const Text = styled.textarea`
     font-size: 20px;
     border: 0;
     outline: 0;
+`
+
+export const Top = styled.div`
+    height: 50px;
+    border-bottom: 2px solid #eeeeee;
 `
 
 export const Bottom = styled.div`
