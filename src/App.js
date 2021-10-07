@@ -10,7 +10,11 @@ function App() {
   const [t, setT] = useState();
 
   function translate(){
-    axios.post('https://openapi.naver.com/v1/papago/n2mt',{source: 1, target: 2, text: text})
+    const headers = [{
+      "X-Naver-Client-Id": "Bhep0ILS5ymb1onqI6st",
+      "X-Naver-Client-Secret": "W27O8Gyva2",
+    }]
+    axios.post('https://openapi.naver.com/v1/papago/n2mt',{source: 1, target: 2, text: text}, headers)
       .then(responese => {
         console.log(responese);
       })
