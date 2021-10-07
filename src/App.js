@@ -21,6 +21,7 @@ function App() {
       .then(responese => {
         console.log(responese);
       })
+      .catch(err => console.log(err));
   }
 
   return (
