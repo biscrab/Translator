@@ -49,6 +49,7 @@ export const Button = styled.button`
 `
 
 export const Header = styled.nav`
+    padding-left: 50px;
     height: 60px;
     border-bottom: 2px solid #eeeeee;
 `

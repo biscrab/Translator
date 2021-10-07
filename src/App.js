@@ -9,6 +9,8 @@ function App() {
   const [text, setText] = useState();
   const [t, setT] = useState();
 
+  axios.defaults.withCredentials = "*";
+
   function translate(){
     const config = {
       headers: {
