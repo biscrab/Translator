@@ -12,14 +12,14 @@ function App() {
   function translate(){
     const config = {
       headers: {
-        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Content-Type': 'application/json',
         'X-Naver-Client-Id': "Bhep0ILS5ymb1onqI6st",
         'X-Naver-Client-Secret': "W27O8Gyva2",
       }
     }
     axios.post('https://openapi.naver.com/v1/papago/n2mt', {source: "ko", target: "en", text: text}, config)
       .then(responese => {
-        console.log(responese);
+        setT(responese.data.message.result.translatedText);
       })
       .catch(err => console.log(err));
   }
@@ -41,8 +41,7 @@ function App() {
     <S.TextDiv>
       <S.Top>
       </S.Top>
-      <S.Text>
-      
+      <S.Text value={t} onChange={(e)=>setT(e.target.value)}>
       </S.Text>
       <S.Bottom>
       </S.Bottom>
