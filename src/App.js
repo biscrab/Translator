@@ -93,7 +93,7 @@ function App() {
         }
       </S.DDiv>
       </>
-      <S.Change onClick={()=>exChange()}>🔁</S.Change>
+      <S.Change onClick={()=>exChange()}>⇄</S.Change>
       </S.Top>
       <S.Text value={v.text} onChange={(e)=>setV({...v, text: e.target.value})} placeholder="번역할 내용을 입력해 주세요">
       </S.Text>
