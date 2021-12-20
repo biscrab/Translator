@@ -7,12 +7,13 @@ import america from './images/america.png'
 
 function App() {
 
-  const [v, setV] = useState({source: "ko", target: "en", text: ""});
   const [t, setT] = useState();
   const [select, setSelect] = useState({source: false, target: false});
   const [name, setName] = useState({source: "한국어", target: "영어"});
 
   axios.defaults.withCredentials = "*";
+
+  const [v, setV] = useState({source: "ko", target: "en", text: ""});
 
   function translate(){
     const config = {
@@ -21,10 +22,6 @@ function App() {
         'X-Naver-Client-Id': "Bhep0ILS5ymb1onqI6st",
         'X-Naver-Client-Secret': "W27O8Gyva2",
         'Access-Control-Allow-Origin': "*"
-      },
-      proxy: {
-        host: '104.236.174.88',
-        port: 3128
       }
     }
     axios.post('https://openapi.naver.com/v1/papago/n2mt', v, config)
